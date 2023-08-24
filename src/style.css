@@ -1,0 +1,289 @@
+@font-face {
+    font-family: roboto;
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: robotoBold;
+    src: url(fonts/Roboto/Roboto-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1.3vw;
+}
+
+body {
+    height: calc(100vh - 2vw);
+    background: linear-gradient(#1351a3, #16e0e0);
+    padding: 2vw 2vw 0 2vw;
+}
+
+header{
+    font-family: roboto;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1vw;
+}
+
+.title{
+    font-family: robotoBold;
+    font-size: 1.9vw;
+}
+
+.left-side{
+    color: white;
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+}
+
+.left-side img{
+    height: 2.5vh;
+    filter: brightness(150%);
+    cursor: pointer;
+}
+
+.project-name{
+    padding-left: 2vw;
+    border-left: solid .1vw white ;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    cursor: pointer;
+}
+
+.arrow{
+    margin-left: 2vw;
+    height: 3vh;
+    transition: transform 0.3s;
+}
+
+/* when active, display should be flex*/
+.project-list{
+    color: white;
+    display: none;
+    border-top: solid .1vw rgba(255, 255, 255, 0.603);
+    padding: 1vw 0 1vw 0;
+    gap: 3vw;
+    width: 100%;
+    font-family: roboto;
+}
+
+.projects{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3vw;
+}
+
+.add-project{
+    align-self: flex-start;
+    cursor: pointer;
+    width: 10vw;
+}
+
+.project{
+    cursor: pointer;
+    border-left: solid .1vw white ;
+}
+
+.project:hover{
+    font-weight: bold;
+}
+
+.content{
+    display: flex;
+    gap: 5vw;
+}
+
+.todoDiv,
+.doingDiv,
+.doneDiv{
+    padding: 1vw 1vw 1vw 1vw;
+    font-family: roboto;
+    font-weight: bold;
+    width: 30vw;
+    background-color: #E3E4E6;
+    border-radius: .3vw;
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    flex-grow: 0;
+}
+
+
+.task{
+    background-color: white;
+    width: 100%;
+    padding: 1vh .5vh 1vh .5vh;
+    border-radius: .3vw;
+    font-weight: 300;
+    align-items: center;
+}
+
+.task-name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vw;
+    gap: 1vw;
+}
+
+.task-name img{
+    height: 2vh;
+    cursor: pointer;
+}
+
+.task-button{
+    font-family: roboto;
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: start;
+    color: #46484b8e;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* When active, this div should be block */
+.task-creation{
+    display: none;
+}
+
+.task-creation input{
+    border:none
+}
+
+.add-button{
+    font-family: roboto;
+    width: 5vw;
+    border:none;
+    background-color: #1356A5;
+    color: white;
+    cursor: pointer;
+}
+
+.add-button:hover{
+    background-color: #1970e2;
+}
+
+.close-add-task{
+    font-family: roboto;
+    background-color: #a51313;
+    width: 3vw;
+    border:none;
+    color: white;
+    cursor: pointer;
+}
+
+.close-add-task:hover{
+    background-color: #d31818;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+    color: #6B6B6B;
+}
+
+.date img,
+.details img{
+    height: 1.5vw;
+}
+
+.trash{
+    cursor: pointer;
+}
+
+/* When active, display should be grid */
+.project-form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27vw;
+    height: 25vh;
+    background-color: #E3E4E6;
+    border-radius: .3vw;
+    border: solid .3vw #6B6B6B;
+    grid-template-rows: 1fr 4fr;
+    display: none;
+    font-size: 2.5vh;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.title-div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: calc(100% - 1.5vw) 1.5vw;
+    justify-content: center;
+    padding-top: 1vh;
+}
+
+.title-form{
+    font-family: roboto;
+    justify-self: center;
+    padding-left: 2vw;
+    font-size: 5vh;
+}
+
+.close-button{
+    justify-self: end;
+    width: 1.5vw;
+    height: 3vh;
+    background: transparent;
+    border-radius: 100%;
+    font-size: 2.5vh;
+    border: none;
+    cursor: pointer;
+}
+
+.input{
+    font-family: roboto;
+    display: flex;
+    padding: 0.5vw;
+}
+
+.input input{
+    background: transparent;
+    border-radius: .3vw;
+    border: solid .2vw #6B6B6B;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+}
+
+.submit button {
+    font-family: roboto;
+    width: 80%;
+    background-color: #807f7f;
+    padding: 1vh;
+    border-radius: 3vh;
+    border-style: none;
+    color: white;
+    font-size: 2vh;
+    margin-top: 3vh;
+    cursor: pointer;
+}
+
+.submit button:hover {
+    background-color: #6B6B6B;
+}
+

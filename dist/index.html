@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo list</title>
+  </head>
+  <body>
+    <header>
+      <div class="left-side">
+        <p class="title">
+          Todo List
+        </p>
+        <p class="project-name">
+          Default project
+          <img src="cb10b090b3ba01887e1b.png" alt="pencil">
+        </p>
+        
+      </div>
+      <div class="menu">
+        <p>Projects</p>
+        <img class="arrow" src="./6098733c04a94e2726db.png" alt="arrow">
+      </div>
+    </header>
+    <div class="project-form">
+      <div class="title-div">
+          <p class="title-form">ADD PROJECT</p>
+          <button class="close-button">X</button>
+      </div>
+      <form action='' method='get'>
+          <div class="input">
+              <label for='project-name'>Project name:</label>
+              <input id='project-name' name='project-name' maxlength="35" type='text' required/>
+          </div>
+          <div class="submit">
+              <button id="button" class="myButton" value="Submit" id="button">Submit</button>
+          </div>
+      </form>
+    </div>
+    <div class="project-list">
+      <div class="projects">
+        <div class="project">
+          Default project
+        </div>
+      </div>
+      <div class="add-project">
+        Add project +
+      </div>
+    </div>
+    <div class="content">
+      <div class="todoDiv">
+        To Do
+        <div class="task">
+          <div class="task-name">
+            <p>Create ideas</p> 
+            <img src="cb10b090b3ba01887e1b.png" alt="pencil">
+          </div>
+          <div class="details">
+            <div class="date">
+              <img src="./f3910f871f9c07fd5ed8.png" alt="clock">
+              <p>15/03/2001</p>  
+            </div>
+            <img class="trash" src="./069d9a1edb30f62204ab.png" alt="trash can">
+          </div>
+        </div>
+        <button class="task-button">
+          Add task
+        </button>
+        <div class="task-creation">
+          <input class="add-input" type="text">
+          <button class="add-button">Add</button>
+          <button class="close-add-task">X</button>
+        </div>
+      </div>
+      <div class="doingDiv">
+        Doing
+        <button class="task-button">
+          Add task
+        </button>
+        <div class="task-creation">
+          <input type="text">
+          <button class="add-button">Add</button>
+          <button class="close-add-task">X</button>
+        </div>
+      </div>
+      <div class="doneDiv">
+        Done
+        <button class="task-button">
+          Add task
+        </button>
+        <div class="task-creation">
+          <input type="text">
+          <button class="add-button">Add</button>
+          <button class="close-add-task">X</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
