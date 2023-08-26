@@ -123,8 +123,17 @@ function changeTaskDiv() {
 
 }
 
+function clearTasks() {
+  const todoDivTasks = document.querySelectorAll('.task');
+
+  todoDivTasks.forEach(task => {
+    task.remove();
+  })
+}
+
 export {
   addNotes,
   editTaskName,
   changeTaskDiv,
+  clearTasks,
 }

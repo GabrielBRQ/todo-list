@@ -1,4 +1,5 @@
-import { saveProjectLocal } from "./localStorage-control";
+import { saveProjectLocal, loadNotes } from "./localStorage-control";
+import { clearTasks } from "./task-control";
 
 function createProject(projectName){
      const projectList = document.querySelector('.projects');
@@ -28,7 +29,11 @@ function changeCurrentProject() {
 
     projects.forEach(project => {
         project.addEventListener('click', function(){
-            projectName.textContent = project.textContent;
+            if(projectName.textContent.trim() !== project.textContent.trim()){
+                projectName.textContent = project.textContent;
+                clearTasks();
+                loadNotes();
+            }
         })
     })
 }
