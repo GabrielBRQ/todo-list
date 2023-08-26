@@ -1,4 +1,5 @@
 import { createTaskDiv } from "./dom-control";
+import { createProject } from "./project-control";
 
 //function to save task in localStorage
 function saveTaskLocal(text, formattedDate, parentDivClass, projectDiv) {
@@ -33,9 +34,9 @@ function editTaskNameLocal(taskName, dateP, parent, input) {
 //function to load tasks
 function loadNotes() {
     const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
-    const projectName = document.querySelector('.project-name p').textContent;
+    const projectName = document.querySelector('.project-name p');
     savedNotes.forEach(noteObject => {
-        if(noteObject.projectDiv == projectName){
+        if(noteObject.projectDiv == projectName.textContent){
             createTaskDiv(noteObject.text, noteObject.date, noteObject.parentDivClass);
         }
     });

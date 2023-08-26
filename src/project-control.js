@@ -20,11 +20,21 @@ function submitFunction(){
             projectdiv.style.display = 'none';           
         }
     });
-    
-    
+}
+
+function changeCurrentProject() {
+    var projects = document.querySelectorAll('.project');
+    const projectName = document.querySelector('.project-name p');
+
+    projects.forEach(project => {
+        project.addEventListener('click', function(){
+            projectName.textContent = project.textContent;
+        })
+    })
 }
 
 export{
     createProject,
     submitFunction,
+    changeCurrentProject,
 }

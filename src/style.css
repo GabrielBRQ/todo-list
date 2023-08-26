@@ -37,7 +37,7 @@ header{
 .left-side{
     color: white;
     display: flex;
-    gap: 4vw;
+    gap: 1vw;
     align-items: center;
 }
 
@@ -95,6 +95,7 @@ header{
 
 .project{
     cursor: pointer;
+    padding-left: .1vw;
     border-left: solid .1vw white ;
 }
 
