@@ -51,6 +51,10 @@ header{
     padding-left: 2vw;
     border-left: solid .1vw white ;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    height: 2vw;
 }
 
 .menu{
@@ -131,6 +135,7 @@ header{
 .task-name{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 1vw;
     gap: 1vw;
 }
@@ -191,6 +196,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1vw;
 }
 
 .date{
@@ -205,8 +211,31 @@ header{
     height: 1.5vw;
 }
 
+.name-div{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.arrows-div{
+    display: flex;
+    gap: 1vw;
+    padding-right: 1vw;
+}
+
+.right-arrow,
+.left-arrow{
+    cursor: pointer;
+    height: 1.5vw;
+}
+
+.left-arrow{
+    transform: rotate(180deg);
+}
+
 .trash{
     cursor: pointer;
+    padding-right: 1vw;
 }
 
 /* When active, display should be grid */
@@ -216,15 +245,15 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 27vw;
-    height: 25vh;
+    height: 35vh;
     background-color: #E3E4E6;
     border-radius: .3vw;
     border: solid .3vw #6B6B6B;
-    grid-template-rows: 1fr 4fr;
     display: none;
     font-size: 2.5vh;
     justify-content: center;
     gap: 2vh;
+    padding: 1vw 0 1vw 0;
 }
 
 .title-div{
@@ -256,13 +285,13 @@ header{
 .input{
     font-family: roboto;
     display: flex;
-    padding: 0.5vw;
 }
 
 .input input{
     background: transparent;
     border-radius: .3vw;
     border: solid .2vw #6B6B6B;
+    height: 1.5vw;
 }
 
 .submit{
@@ -274,13 +303,13 @@ header{
     font-family: roboto;
     width: 80%;
     background-color: #807f7f;
-    padding: 1vh;
     border-radius: 3vh;
     border-style: none;
     color: white;
     font-size: 2vh;
     margin-top: 3vh;
     cursor: pointer;
+    height: 3vw;
 }
 
 .submit button:hover {
