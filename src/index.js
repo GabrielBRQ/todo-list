@@ -8,15 +8,16 @@ import arrow from './img/arrow-down-sign-to-navigate.png'
 //functions
 import { showdivs, addTask, closeTask, loadNotes } from './dom-control';
 import { addNotes } from './task-control';
-import { submitFunction, changeCurrentProject } from './project-control';
-import { loadProjects } from './localStorage-control';
+import { submitFunction, changeButtonLogic, deleteProject } from './project-control';
+import { loadProjects, verifyNewUser } from './localStorage-control';
 
-
+verifyNewUser();
+loadProjects();
 showdivs();
 addTask();
 closeTask();
 addNotes();
 loadNotes();
 submitFunction();
-loadProjects();
-changeCurrentProject();
+changeButtonLogic();
+deleteProject();

@@ -3,7 +3,7 @@ import { createProject } from "./project-control";
 
 //function to save task in localStorage
 function saveTaskLocal(text, formattedDate, parentDivClass, projectDiv) {
-    const noteObject = { text, date: formattedDate, parentDivClass, projectDiv};
+    const noteObject = { text, date: formattedDate, parentDivClass, projectDiv: projectDiv.trim()};
     
     const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
     savedNotes.push(noteObject);
@@ -51,10 +51,21 @@ function loadNotes() {
  }
 
  function loadProjects() {
-      const savedprojects = JSON.parse(localStorage.getItem('projects')) || [];
-       savedprojects.forEach(projectObject => {
-            createProject(projectObject.name);
-       });
+    const projectName = document.querySelector('.project-name p');
+    const savedprojects = JSON.parse(localStorage.getItem('projects')) || [];
+    projectName.textContent = savedprojects[0].name;
+    savedprojects.forEach(projectObject => {
+        createProject(projectObject.name);
+    });
+  }
+
+  function verifyNewUser(){
+    const savedprojects = JSON.parse(localStorage.getItem('projects')) || [];
+    const projectName = 'My first project'
+    if (savedprojects.length < 1) {
+        createProject(projectName);
+        saveProjectLocal(projectName);
+    }
   }
 
 export{
@@ -64,4 +75,5 @@ export{
     loadNotes,
     saveProjectLocal,
     loadProjects,
+    verifyNewUser,
 }
