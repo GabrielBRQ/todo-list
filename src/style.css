@@ -317,3 +317,74 @@ header{
     background-color: #6B6B6B;
 }
 
+@media only screen and (max-width: 920px)  {
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todoDiv,
+    .doingDiv,
+    .doneDiv{
+        width: 90vw;
+    }
+
+    *{
+        font-size: 1.8vh;
+    }
+
+    .title{
+        font-size: 2.2vh;
+    }
+
+    .add-project{
+        width: 33vw;
+    }
+
+    .task{
+        width: 98%;
+    }
+
+    .task-name{
+        margin-bottom: 2.5vh;
+    }
+
+    .date img,
+    .details img{
+        height: 3.5vw;
+    }
+
+    .arrows-div{
+        gap: 2vh;
+    }
+
+    .add-button,
+    .close-add-task{
+        width: 18vw;
+    }
+
+    .project-form{
+        width: 85vw;
+    }
+
+    .project-list{
+        padding: 3vw 0 3vw 0;
+    }
+
+    .input{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input input{
+        height: 4.5vw;
+    }
+
+    .project-form{
+        grid-template-columns: 95%;
+    }
+
+    .submit button{
+        height: 10vw;
+    }
+}
