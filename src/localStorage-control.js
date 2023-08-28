@@ -63,7 +63,6 @@ function loadNotes() {
     const savedprojects = JSON.parse(localStorage.getItem('projects')) || [];
     const projectName = 'My first project'
     if (savedprojects.length < 1) {
-        createProject(projectName);
         saveProjectLocal(projectName);
     }
   }
